@@ -1,0 +1,58 @@
+background yes
+font sans serif:size=8
+xftfont sans serif:size=8
+use_xft yes
+xftalpha 0.5
+update_interval 1.0
+total_run_times 0
+
+own_window_class Conky
+own_window yes
+own_window_type conky
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+double_buffer yes
+draw_shades yes
+draw_outline yes
+draw_borders no
+draw_graph_borders no
+minimum_size 250
+maximum_width 220
+default_color ffffff
+default_shade_color 000000
+draw_outline no
+alignment top_left
+gap_x 10
+gap_y 35
+no_buffers yes
+cpu_avg_samples 2
+override_utf8_locale yes
+uppercase no
+use_spacer none
+
+TEXT
+${font sans serif:size=15} Statistics $font
+
+${goto 30}${font sans serif:size=7.5}CPU1: ${cpu cpu0}% ${goto 135}CPU2: ${cpu cpu1}%${font}
+${goto 30}${cpubar cpu0 7,90}${goto 135}${cpubar cpu1 7,90}
+${goto 30}${font sans serif:size=7.5}CPU3: ${cpu cpu2}% ${goto 135}CPU4: ${cpu cpu3}%${font}
+${goto 30}${cpubar cpu2 7,90}${goto 135}${cpubar cpu3 7,90}
+${goto 30}${font sans serif:size=7.5}RAM: ${memperc}% ${goto 135}SWAP: ${swapperc}%${font}
+${goto 30}${membar 7,90}${goto 135}${swapbar 7,90}
+${goto 30}${font sans serif:size=7.5}STORAGE: ${fs_free /}
+${goto 30}${fs_bar 7,195 /}
+${goto 30}${font sans serif:size=7.5}${fs_size /}
+
+
+${font sans serif:size=15}${voffset -10} Processes $font $alignc ${goto 135} ${alignr}MEM   ${alignr}CPU
+
+${goto 30}${top name 1} ${goto 125}$alignr${top mem 1} $alignr${top cpu 1}
+${goto 30}${top name 2} ${goto 125}$alignr${top mem 2} $alignr${top cpu 2}
+${goto 30}${top name 3} ${goto 125}$alignr${top mem 3} $alignr${top cpu 3}
+${goto 30}${top name 4} ${goto 125}$alignr${top mem 4} $alignr${top cpu 4}
+${goto 30}${top name 5} ${goto 125}$alignr${top mem 5} $alignr${top cpu 5}
+${goto 30}${top name 6} ${goto 125}$alignr${top mem 6} $alignr${top cpu 6}
+${goto 30}${top name 7} ${goto 125}$alignr${top mem 7} $alignr${top cpu 7}
+
+${goto 30}Processes: $processes
