@@ -256,7 +256,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Button 1
 button = new
-button_icon = start.png
+button_icon = ~/.config/tint2/start.png
 button_text = 
 button_tooltip = App Launcher
 button_lclick_command = rofi -show run

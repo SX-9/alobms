@@ -1,14 +1,13 @@
 #! /bin/bash
 
-killall nitrogen pulseaudio picom dunst tint2 conky florence pa-applet pc-web-dash
-
-picom &
-dunst &
-tint2 &
-conky &
-pa-applet &
-pc-web-dash &
-
 obmenu-generator -u -p -c -i
 nitrogen --restore
 pulseaudio --start
+
+pgrep picom || picom &
+pgrep dunst || dunst &
+pgrep tint2 || tint2 &
+pgrep conky || conky &
+pgrep nm-applet || nm-applet &
+pgrep pa-applet || pa-applet &
+pgrep pc-web-dash || pc-web-dash &
