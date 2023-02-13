@@ -1,4 +1,8 @@
 # Arch Linux Openbox Simple Setup
+Run `install.sh` to setup automatically.
+NOTE: This Script Is Made For Fresh New Systems.
+
+Heres Also A Manual Install Guide:
 ```bash
 # Install Required Packages
 
